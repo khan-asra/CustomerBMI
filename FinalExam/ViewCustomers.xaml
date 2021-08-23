@@ -1,0 +1,88 @@
+﻿<Page
+    x:Class="FinalExam.ViewCustomers"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FinalExam"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <!-- Row Defination -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="6*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <!-- Column Defination -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <!-- ListView -->
+        <ListView x:Name="CustomerList"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"
+                  SelectionChanged="ViewSelection"
+                  SelectedItem="{x:Bind selectedItem,Mode=TwoWay}"
+                   BorderThickness="3"
+                   BorderBrush="{ThemeResource SystemControlForegroundBaseMediumLowBrush}" 
+                   Grid.Column="0"
+                   Grid.Row="1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <!-- BODY-->
+                        <TextBlock Text="{Binding ID}" Padding="2" Margin="4"  Width="50"/>
+                        <TextBlock Text="{Binding FirstName }" Padding="2" Margin="4" Width="100"/>
+                        <TextBlock Text="{Binding LastName}" Padding="2" Margin="4" Width="100"/>
+                        <TextBlock Text="{Binding Age}" Padding="2" Margin="4" Width="50"/>
+                        <TextBlock Text="{Binding Weight}" Padding="2" Margin="4" Width="50"/>
+                        <TextBlock Text="{Binding Height}" Padding="2" Margin="4" Width="50"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <!--Page Header-->
+        <TextBlock x:Name="ViewCustomerPage" 
+                   Text="View Customer" 
+                   FontSize="40"
+                   Grid.Row="0"
+                    FontWeight="Bold"       
+                   TextAlignment="Center"
+                   Margin="20" />
+        <!--StackPanel-->
+        <StackPanel   
+            BorderBrush="{ThemeResource SystemControlForegroundBaseMediumLowBrush}"
+            BorderThickness="5"
+            Padding="5"
+            Grid.Column="1"
+            Grid.Row="1"
+            Width="224"
+            VerticalAlignment="Center"
+            Height="453" Margin="13,0,138,0">
+            <TextBlock Text="Customer Details" 
+                       FontSize="18" 
+                       Padding="20" />
+            <TextBlock Text="First Name" />
+            <TextBox x:Name="txtFName"
+                     IsReadOnly="True" />
+            <TextBlock Text="Last Name" />
+            <TextBox x:Name="txtLName"
+                     IsReadOnly="True" />
+            <TextBlock Text="Age" />
+            <TextBox x:Name="txtAge"
+                     IsReadOnly="True" />
+            <TextBlock Text="Weight" />
+            <TextBox x:Name="txtWeight"
+                     IsReadOnly="True" />
+            <TextBlock Text="Height" />
+            <TextBox x:Name="txtHeight"
+                     IsReadOnly="True" />
+            <TextBlock Text="BMI" />
+            <TextBox x:Name="txtBMI"
+                     IsReadOnly="True" />
+        </StackPanel>
+    </Grid>
+</Page>

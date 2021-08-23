@@ -1,0 +1,140 @@
+﻿<Page
+    x:Class="FinalExam.AddCustomer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FinalExam"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <!--Grid -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*" />
+            <RowDefinition Height="1*" />
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <!--textblock -->
+        <TextBlock Grid.Row="0"
+                   Text="Add Customer"
+                   FontSize="35"
+                   FontWeight="Bold"
+                   Margin="20" />
+        <!--Grid -->
+        <Grid VerticalAlignment="Top"
+              Margin="100">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+
+            <!--ID -->
+            <TextBlock Grid.Row="0"
+                       Grid.Column="0"
+                       Text="ID: "
+                       Margin="5" />
+            <TextBox Grid.Row="0"
+                     Grid.Column="1"
+                     x:Name="txtID"
+                     Width="200"
+                     PlaceholderText="Enter ID"
+                     Margin="5" />
+            <!--FIRST NAME-->
+            <TextBlock Grid.Row="1"
+                       Grid.Column="0"
+                       Text="First Name: "
+                       Margin="5" />
+            <TextBox Grid.Row="1"
+                     Grid.Column="1"
+                     x:Name="txtFirstName"
+                     Width="200"
+                     PlaceholderText="Enter First Name"
+                     Margin="5" />
+            <!--LAST NAME-->
+            <TextBlock Grid.Row="2"
+                       Grid.Column="0"
+                       Text="Last Name: "
+                       Margin="5" />
+            <TextBox Grid.Row="2"
+                     Grid.Column="1"
+                     x:Name="txtLastName"
+                     Width="200"
+                     PlaceholderText="Enter Last Name"
+                     Margin="5" />
+
+
+            <!--AGE-->
+            <TextBlock Grid.Row="3"
+                       Grid.Column="0"
+                       Text="Age: "
+                       Margin="5" />
+            <TextBox Grid.Row="3"
+                     Grid.Column="1"
+                     x:Name="txtAge"
+                     Width="200"
+                     PlaceholderText="Enter Age"
+                     Margin="5" />
+
+            <!--WEIGHT-->
+            <TextBlock Grid.Row="4"
+                       Grid.Column="0"
+                       Text="Weight: "
+                       Margin="5" />
+            <TextBox Grid.Row="4"
+                     Grid.Column="1"
+                     x:Name="txtWeight"
+                     Width="200"
+                     PlaceholderText="Enter Weight"
+                     Margin="5" />
+            <!--HEIGHT-->
+
+            <!--HEIGHT -->
+            <TextBlock Grid.Row="5"
+                       Grid.Column="0"
+                       Text="Height: "
+                       Margin="5" />
+            <TextBox Grid.Row="5"
+                     Grid.Column="1"
+                     x:Name="txtHeight"
+                     Width="200"
+                     PlaceholderText="Enter Height"
+                     Margin="5" />
+
+        </Grid>
+        <!--StackPanel -->
+        <StackPanel Grid.Column="1"
+         Grid.Row="1"
+         Margin="10,10,64,0"
+         VerticalAlignment="Top">
+            <!--StackPanel button -->
+            <Button 
+                x:Name="btnAdd"
+                Content="Add Customer"  
+                Margin="10,10,0,0" 
+                VerticalAlignment="Top" 
+                Click="OnClickAdd"/>
+
+            <Button   
+            x:Name="btnBack"
+                Content="Back"  
+                Margin="10,10,0,0" Width="108" Click="OnClickBack" 
+           
+            />
+        </StackPanel>
+
+    </Grid>
+</Page>
